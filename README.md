@@ -1,18 +1,30 @@
-# node_sql
- nodejs application connected to an sql database
+# Backend Home Appliances Site
 
-## SQL
+Welcome to the backend codebase of our amazing shopping site! This repository contains the server-side code that powers our online shopping platform. Our goal is to create a seamless and enjoyable shopping experience for users by building a robust and efficient backend system.
 
-- sqlite3
-- mongoDB
-- mysql
-- postgreSQL
+## Table of Contents
 
-## ASSIGNMENTS
+- [Project Overview](#project-overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Database Setup](#database-setup)
+- [Migration and Seeding](#migration-and-seeding)
+- [API Documentation](#api-documentation)
+-
 
-- [x] clone repository && run npm install
-- [x] write client side javascript to register new user
-- [x] write client side javascript to get all employees
-- [x] write client side javascript to create new employee
-- [x] write client side javascript to update employee
-- [x] write client side javascript to delete employee
+## Project Overview
+
+Our shopping site is powered by Node.js, using an Object-Relational Model (ORM) for MySQL. It includes user authentication, image handling, and functionalities to manage orders and products.
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js
+- npm (Node Package Manager)
+- MySQL
