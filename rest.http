@@ -1,0 +1,63 @@
+###
+# get all users
+GET http://localhost:7070/
+
+###
+# get all employees
+GET http://localhost:7070/all-products
+
+###
+# get a single employee by id
+GET http://localhost:7070/uploads/tv.webp
+
+###
+# register new user
+POST http://localhost:7070/api/user
+Content-Type: application/json
+
+{
+    "name": "yultrish",
+    "email": "yultrishgmail.com",
+   "password": "admin1234"
+}
+
+###
+# login a user
+POST http://localhost:7070/api/login
+Content-Type: application/json
+
+{
+    "email": "yultrish@gmail.com",
+   "password": "admin1234"
+}
+
+###
+# create new employee
+POST http://localhost:7070/api/employee
+Content-Type: application/json
+
+{
+    "name": "Sana Gomdah",
+    "email": "sanah@mail.com",
+   "job_title": "Software Engineer"
+}
+
+###
+# delete employee
+DELETE  http://localhost:7070/api/employee/1
+
+###
+# update employee
+PATCH  http://localhost:7070/api/employee/6
+Content-Type: application/json
+
+{
+    "name": "Sana Gomdah",
+    "email": "san@mail.com",
+   "job_title": "Software Engineer"
+}
+
+###
+# Get cUstomer
+GET http://localhost:7070/shop/v1/customer/47
+

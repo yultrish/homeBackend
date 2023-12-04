@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        /* Add your CSS styles here for product display */
+        /* Example: */
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <div id="product-list"></div>
+
+    <script>
+        window.addEventListener('load', function () {
+            var productList = document.getElementById('product-list');
+
+    // Create a function to fetch product data
+    function fetchProductData() {
+        // Make a fetch request to fetch product data from your server/API
+        fetch('http://localhost:7070/products') // Replace with the actual API endpoint
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                // Iterate through the products and display them
+                data.forEach(function (product) {
+                    var productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+                    productDiv.innerHTML = `
+                        <h2>${product.name}</h2>
+                        <p>Price: $${product.price}</p>
+                        <p>Description: ${product.description}</p>
+                        <p>Stock: ${product.stock}</p>
+                        <img src="/public/uploads/${product.image}" alt="${product.name}">
+                        <img src="/uploads/your-image-filename.jpg" alt="Your Image">
+                    `;
+                    productList.appendChild(productDiv);
+                });
+            })
+            .catch(function (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+
+    // Call the fetchProductData function when the page loads
+    fetchProductData();
+});
+
+
+
+
+    </script>
+</body>
+</html>
+

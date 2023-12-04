@@ -1,0 +1,31 @@
+###
+# get all customers
+GET http://localhost:7070/shop/v1/customers
+
+###
+# get one customer by id
+GET http://localhost:7070/shop/v1/customer/1
+
+###
+# create a new customer 
+POST http://localhost:7070/shop/v1/customer
+Content-Type: application/json
+
+{
+    "name": "Justin Fraser",
+    "city": "Paris"
+}
+
+###
+# delete a customer by id
+DELETE http://localhost:7070/shop/v1/customer/3
+
+###
+# update a customer by id
+PATCH  http://localhost:7070/shop/v1/customer/2
+Content-Type: application/json
+
+{
+    "name": "Justin Fraser",
+    "city": "Paris"
+}

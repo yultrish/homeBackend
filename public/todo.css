@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+main.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #4b71a6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main.wrapper h1 {
+    color: #fff;
+    padding: 2rem;
+}
+
+main.wrapper form {
+    width: 30%;
+    height: 15%;
+    background-color: #143056;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px 30px 0 0;
+    gap: 1rem;
+
+}
+
+main.wrapper form input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+main.wrapper form button {
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+main.wrapper form button i {
+    font-size: 1rem;
+    color: #143056;
+}
+
+main.wrapper div.itemContainer {
+    width: 30%;
+    height: 50%;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    overflow: auto;
+}
+
+main.wrapper .itemContainer .item {
+    background-color: #143056;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1rem;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+
+}
+
+main.wrapper .itemContainer div.completed {
+    display: flex;
+    gap: 1rem;
+}
+
+main.wrapper .itemContainer div.completed h2 {
+    color: #fff;
+    word-wrap: break-word;
+    padding-right: 1rem;
+}
+
+main.wrapper .itemContainer div.completed input {
+    cursor: pointer;
+}
+
+main.wrapper .itemContainer .item:first-child {
+    margin-top: 0;
+}
+
+main.wrapper .itemContainer i {
+    cursor: pointer;
+    color: red;
+}
+
+.remove-deleted {
+    transform: translateY(10rem);
+    opacity: 0;
+
+}
+
+.completedItem {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.7);
+    /* color: #000; */
+}
+
+::-webkit-scrollbar {
+    width: 0
+}
+
+@media only screen and (max-width: 768px) {
+    main.wrapper form {
+        width: 80%;
+    }
+
+    main.wrapper div.itemContainer {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    main.wrapper form {
+        width: 50%;
+    }
+
+    main.wrapper div.itemContainer {
+        width: 50%;
+    }
+}

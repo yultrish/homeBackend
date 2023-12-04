@@ -1,0 +1,16 @@
+###
+# get all items
+GET http://localhost:7070/todo/allItems
+
+###
+# create new item
+POST http://localhost:7070/todo/items
+Content-Type: application/json
+
+{
+    "item": "Watch javascript tutorial"
+}
+
+###
+# delete item
+DELETE http://localhost:7070/todo/item/1
