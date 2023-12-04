@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
         } else {
 
             //make fetch request
-            const result = await fetch('http://localhost:7070/api/login', {
+            const result = await fetch('http://localhost:7090/api/login', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

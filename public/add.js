@@ -53,7 +53,7 @@ addBtn.addEventListener('click', async () => {
         }
 
         // Fetch request to submit product details
-      const result = await fetch('http://localhost:7070/product-upload', {
+      const result = await fetch('http://localhost:7090/product-upload', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
